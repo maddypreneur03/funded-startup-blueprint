@@ -3,952 +3,1011 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raise $3-5 Million For Your Startup | Saurabh Bhatnagar</title>
-    <meta name="description" content="Done-With-You Funding Consultation - Help startup owners raise $3-5 Million in 180 days or less">
+    <title>Raise $3-5 Million For Your Startup | Funded Startup Blueprint</title>
+    <meta name="description" content="Done-with-you funding consultation. Get investor-ready in 180 days with custom pitch deck, financial models, and warm investor introductions. Apply now.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            --color-bg: #FAFAFA;
+            --color-bg-alt: #FFFFFF;
+            --color-text: #1a1a1a;
+            --color-text-muted: #666666;
+            --color-primary: #1e3a8a;
+            --color-primary-hover: #1e40af;
+            --color-accent: #d4af37;
+            --color-accent-hover: #b8941f;
+            --color-border: #e0e0e0;
+            --color-card-bg: #FFFFFF;
+            --color-success: #059669;
+            --color-error: #dc2626;
+            
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        
+        html {
+            scroll-behavior: smooth;
         }
-
+        
+        body {
+            font-family: var(--font-body);
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--color-text);
+            background: var(--color-bg);
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--color-primary);
+        }
+        
+        h1 {
+            font-size: 60px;
+            margin-bottom: 24px;
+        }
+        
+        h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+        
+        p {
+            margin-bottom: 16px;
+        }
+        
+        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
-
-        /* Hero Section */
+        
+        /* Section */
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-alt {
+            background: var(--color-bg-alt);
+        }
+        
+        /* Hero */
         .hero {
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             color: white;
-            padding: 80px 20px;
+            padding: 120px 0 100px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)" /></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
+            color: white;
+            font-size: 64px;
             margin-bottom: 20px;
-            line-height: 1.2;
+            font-weight: 800;
         }
-
-        .hero h2 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-bottom: 30px;
+        
+        .hero-subtitle {
+            font-size: 22px;
+            margin-bottom: 40px;
             opacity: 0.95;
-            line-height: 1.4;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
         }
-
+        
+        /* CTA Button */
         .cta-button {
             display: inline-block;
-            background: #f59e0b;
-            color: white;
-            padding: 20px 50px;
-            font-size: 1.3rem;
+            background: var(--color-accent);
+            color: var(--color-primary);
+            padding: 20px 48px;
+            font-size: 18px;
             font-weight: 700;
             text-decoration: none;
             border-radius: 8px;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            text-transform: none;
+            letter-spacing: 0.5px;
+        }
+        
+        .cta-button:hover {
+            background: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+        
+        .cta-button-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-button-secondary:hover {
+            background: white;
+            color: var(--color-primary);
+        }
+        
+        .trust-line {
+            margin-top: 32px;
+            font-size: 15px;
+            opacity: 0.85;
+        }
+        
+        /* Problem Section */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+        
+        .problem-card {
+            background: var(--color-card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            border-left: 4px solid var(--color-error);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .problem-card h3 {
+            font-size: 20px;
+            color: var(--color-error);
+            margin-bottom: 12px;
+            font-family: var(--font-body);
+            font-weight: 700;
+        }
+        
+        .problem-card p {
+            color: var(--color-text-muted);
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        /* Solution / Process */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 48px;
+            margin-top: 64px;
+        }
+        
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, #3b82f6 100%);
+            color: white;
+            font-size: 32px;
+            font-weight: 800;
+            border-radius: 50%;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 20px rgba(30, 58, 138, 0.2);
+        }
+        
+        .process-step h3 {
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+        
+        .process-step p {
+            color: var(--color-text-muted);
+            font-size: 16px;
+        }
+        
+        /* Benefits */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 48px;
+        }
+        
+        .benefit-card {
+            background: var(--color-card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .benefit-card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        
+        .benefit-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: var(--color-primary);
+        }
+        
+        .benefit-card p {
+            color: var(--color-text-muted);
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 0;
+        }
+        
+        /* Testimonials */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+        
+        .testimonial-card {
+            background: var(--color-card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            border-top: 4px solid var(--color-accent);
+        }
+        
+        .testimonial-quote {
+            font-size: 18px;
+            font-style: italic;
+            color: var(--color-text);
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+        
+        .testimonial-quote::before {
+            content: '"';
+            font-size: 48px;
+            color: var(--color-accent);
+            line-height: 0;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .testimonial-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--color-border);
+        }
+        
+        .testimonial-info {
+            flex: 1;
+        }
+        
+        .testimonial-name {
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 4px;
+        }
+        
+        .testimonial-title {
+            font-size: 14px;
+            color: var(--color-text-muted);
+        }
+        
+        /* Credibility */
+        .credibility-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 48px;
+            margin-top: 48px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--color-accent);
+            font-family: var(--font-display);
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: var(--color-text-muted);
+            font-weight: 600;
+        }
+        
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 48px;
+            margin-top: 64px;
+        }
+        
+        .pricing-card {
+            background: var(--color-card-bg);
+            padding: 56px 40px;
+            border-radius: 16px;
+            border: 3px solid var(--color-border);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--color-accent);
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.15);
+            transform: scale(1.02);
+        }
+        
+        .pricing-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 24px;
+            right: -20px;
+            background: var(--color-accent);
+            color: white;
+            padding: 6px 40px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            transform: rotate(8deg);
+        }
+        
+        .pricing-label {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 16px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
-        .cta-button:hover {
-            background: #d97706;
-            transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
-        }
-
-        .subheadline {
-            background: #f3f4f6;
-            padding: 40px 20px;
-            text-align: center;
-            font-size: 1.3rem;
-            font-style: italic;
-            color: #1f2937;
-        }
-
-        /* Section Styling */
-        .section {
-            padding: 80px 20px;
-        }
-
-        .section-alt {
-            background: #f9fafb;
-        }
-
-        .section h2 {
-            font-size: 2.8rem;
-            color: #1e3a8a;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .section h3 {
-            font-size: 2rem;
-            color: #1e3a8a;
-            margin: 40px 0 20px;
-        }
-
-        .section p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            color: #4b5563;
-        }
-
-        /* Problem Section */
-        .pain-points {
-            list-style: none;
-            margin: 30px 0;
-        }
-
-        .pain-points li {
-            font-size: 1.2rem;
-            padding: 15px 0;
-            padding-left: 40px;
-            position: relative;
-            color: #dc2626;
-            font-weight: 500;
-        }
-
-        .pain-points li:before {
-            content: "❌";
-            position: absolute;
-            left: 0;
-            font-size: 1.5rem;
-        }
-
-        /* Solution Section */
-        .benefits {
-            list-style: none;
-            margin: 30px 0;
-        }
-
-        .benefits li {
-            font-size: 1.2rem;
-            padding: 15px 0;
-            padding-left: 40px;
-            position: relative;
-            color: #059669;
-            font-weight: 500;
-        }
-
-        .benefits li:before {
-            content: "✅";
-            position: absolute;
-            left: 0;
-            font-size: 1.5rem;
-        }
-
-        /* Offer Cards */
-        .phase-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .phase-card {
-            background: white;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 40px;
-            transition: all 0.3s ease;
-        }
-
-        .phase-card:hover {
-            border-color: #3b82f6;
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
-            transform: translateY(-5px);
-        }
-
-        .phase-card h4 {
-            font-size: 1.5rem;
-            color: #1e3a8a;
-            margin-bottom: 20px;
-        }
-
-        .phase-card ul {
-            list-style: none;
-        }
-
-        .phase-card ul li {
-            padding: 10px 0;
-            padding-left: 30px;
-            position: relative;
-            color: #4b5563;
-        }
-
-        .phase-card ul li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #3b82f6;
-            font-weight: bold;
-        }
-
-        /* Pricing Section */
-        .pricing-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
-            margin: 60px 0;
-        }
-
-        .pricing-card {
-            background: white;
-            border: 3px solid #e5e7eb;
-            border-radius: 16px;
-            padding: 50px;
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .pricing-card.featured {
-            border-color: #f59e0b;
-            box-shadow: 0 20px 60px rgba(245, 158, 11, 0.2);
-        }
-
-        .pricing-card.featured:before {
-            content: "MOST POPULAR";
-            position: absolute;
-            top: 20px;
-            right: -35px;
-            background: #f59e0b;
-            color: white;
-            padding: 5px 50px;
-            transform: rotate(45deg);
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15);
-        }
-
-        .pricing-card h3 {
-            font-size: 1.5rem;
-            color: #1e3a8a;
-            margin-bottom: 20px;
-        }
-
-        .price {
-            font-size: 3.5rem;
-            color: #1e3a8a;
+        
+        .pricing-amount {
+            font-size: 56px;
             font-weight: 800;
-            margin: 20px 0;
+            color: var(--color-primary);
+            font-family: var(--font-display);
+            margin-bottom: 8px;
         }
-
-        .price-note {
-            font-size: 1rem;
-            color: #6b7280;
-            margin-bottom: 30px;
+        
+        .pricing-note {
+            font-size: 15px;
+            color: var(--color-text-muted);
+            margin-bottom: 32px;
         }
-
+        
         .pricing-features {
             text-align: left;
-            margin: 30px 0;
-            padding: 30px 0;
-            border-top: 2px solid #e5e7eb;
-            border-bottom: 2px solid #e5e7eb;
+            margin: 32px 0;
+            padding: 32px 0;
+            border-top: 2px solid var(--color-border);
+            border-bottom: 2px solid var(--color-border);
         }
-
+        
         .pricing-features li {
-            padding: 10px 0;
-            font-size: 1.1rem;
-            color: #4b5563;
+            padding: 12px 0;
+            font-size: 16px;
+            color: var(--color-text);
+            list-style: none;
+            position: relative;
+            padding-left: 32px;
         }
-
-        /* Qualification Section */
-        .qualification-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin: 40px 0;
+        
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-success);
+            font-weight: 800;
+            font-size: 20px;
         }
-
-        .qualification-box {
-            padding: 40px;
-            border-radius: 12px;
-        }
-
-        .for-you {
-            background: #d1fae5;
-            border: 2px solid #059669;
-        }
-
-        .not-for-you {
-            background: #fee2e2;
-            border: 2px solid #dc2626;
-        }
-
-        .qualification-box h3 {
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-
-        /* Credibility Section */
-        .credibility {
-            background: #1e3a8a;
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .credibility h2 {
-            color: white;
-            margin-bottom: 40px;
-        }
-
-        .credentials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .credential-item {
-            padding: 20px;
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-
-        .credential-item:before {
-            content: "✅";
-            display: block;
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        /* Testimonial Section */
-        .testimonial {
-            background: #f9fafb;
-            padding: 40px;
-            border-left: 5px solid #f59e0b;
-            margin: 30px 0;
-            font-style: italic;
-            font-size: 1.3rem;
-        }
-
-        .testimonial-author {
-            margin-top: 20px;
-            font-weight: bold;
-            color: #1e3a8a;
-            font-style: normal;
-        }
-
-        /* FAQ Section */
-        .faq-item {
-            margin: 30px 0;
-            padding: 30px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .faq-item h4 {
-            color: #1e3a8a;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-        }
-
-        .faq-item p {
-            font-size: 1.1rem;
-        }
-
-        /* Guarantee Box */
+        
+        /* Guarantee */
         .guarantee-box {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            background: linear-gradient(135deg, var(--color-success) 0%, #059669 100%);
             color: white;
-            padding: 50px;
+            padding: 56px;
             border-radius: 16px;
             text-align: center;
-            margin: 60px 0;
-            box-shadow: 0 20px 60px rgba(16, 185, 129, 0.3);
+            margin: 64px 0;
+            box-shadow: 0 20px 60px rgba(5, 150, 105, 0.2);
         }
-
+        
         .guarantee-box h3 {
             color: white;
-            font-size: 2.5rem;
+            font-size: 32px;
             margin-bottom: 20px;
         }
-
+        
         .guarantee-box p {
-            color: white;
-            font-size: 1.3rem;
+            font-size: 18px;
             line-height: 1.8;
+            margin-bottom: 0;
         }
-
-        /* Final CTA Section */
+        
+        /* FAQ */
+        .faq-list {
+            max-width: 900px;
+            margin: 48px auto 0;
+        }
+        
+        .faq-item {
+            background: var(--color-card-bg);
+            margin-bottom: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--color-primary);
+            padding: 24px 32px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 32px 24px;
+            color: var(--color-text-muted);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        /* Final CTA */
         .final-cta {
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             color: white;
-            padding: 100px 20px;
+            padding: 100px 0;
             text-align: center;
         }
-
+        
         .final-cta h2 {
             color: white;
-            font-size: 3rem;
-            margin-bottom: 30px;
+            font-size: 48px;
+            margin-bottom: 24px;
         }
-
-        .final-cta h3 {
+        
+        .final-cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--color-primary);
             color: white;
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 50px;
+            padding: 48px 0;
+            text-align: center;
         }
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 50px 0;
-            text-align: left;
+        
+        footer p {
+            margin: 0;
+            opacity: 0.8;
         }
-
-        .step {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-        }
-
-        .step-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #f59e0b;
-            margin-bottom: 10px;
-        }
-
-        .step h4 {
-            color: white;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
-        .step p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1rem;
-        }
-
-        .ps-section {
-            margin-top: 60px;
-            padding-top: 40px;
-            border-top: 2px solid rgba(255, 255, 255, 0.3);
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
+        
         /* Responsive */
+        @media (max-width: 1024px) {
+            h1 { font-size: 48px; }
+            h2 { font-size: 36px; }
+            .hero h1 { font-size: 52px; }
+        }
+        
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero h2 {
-                font-size: 1.3rem;
-            }
-
-            .section h2 {
-                font-size: 2rem;
-            }
-
-            .qualification-grid {
+            section { padding: 60px 0; }
+            h1 { font-size: 36px; }
+            h2 { font-size: 28px; }
+            .hero h1 { font-size: 40px; }
+            .hero-subtitle { font-size: 18px; }
+            
+            .problem-grid,
+            .process-steps,
+            .benefits-grid,
+            .testimonial-grid,
+            .pricing-grid {
                 grid-template-columns: 1fr;
             }
-
-            .pricing-container {
-                grid-template-columns: 1fr;
-            }
-
-            .phase-cards {
-                grid-template-columns: 1fr;
+            
+            .pricing-card.featured {
+                transform: scale(1);
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
+            <div class="hero-badge">🏆 As Seen on Shark Tank India Season 5</div>
+            
             <h1>Raise $3-5 Million For Your Startup<br>in 180 Days or Less</h1>
-            <h2>The Done-With-You Funding Blueprint That Gets You In Front of the Right Investors — Without Wasting Months on Dead-End Pitches</h2>
-            <a href="#apply" class="cta-button">Book Your Strategy Call</a>
-        </div>
-    </section>
-
-    <!-- SUBHEADLINE -->
-    <div class="subheadline">
-        <div class="container">
-            If you're a serious startup founder ready to close your Series A or Seed round — but struggling with pitch decks, investor connections, or getting past "maybe later" — this is for you.
-        </div>
-    </div>
-
-    <!-- PROBLEM SECTION -->
-    <section class="section">
-        <div class="container">
-            <h2>Why Most Startups Fail to Raise Funding<br>(And It's Not What You Think)</h2>
             
-            <p style="font-size: 1.3rem; text-align: center; margin: 40px 0;">
-                You've built something real.<br>
-                You have traction. Customers. Revenue (maybe).<br>
-                You <strong>know</strong> you need funding to scale.
+            <p class="hero-subtitle">
+                The done-with-you funding program that gets you investor-ready with a custom pitch deck, financial models, and warm introductions to the right investors — without wasting months on dead-end pitches.
             </p>
-
-            <h3 style="text-align: center; margin-top: 60px;">But here's what's actually happening:</h3>
-
-            <ul class="pain-points">
-                <li><strong>Your pitch deck looks like everyone else's</strong> — investors see 100+ decks a month and yours blends in</li>
-                <li><strong>You're pitching the wrong investors</strong> — wasting time on VCs who don't invest in your stage/sector</li>
-                <li><strong>You don't have warm intros</strong> — cold emails get 2% response rates (if you're lucky)</li>
-                <li><strong>Your financials don't add up</strong> — one bad question about unit economics and you lose credibility</li>
-                <li><strong>You're terrible at storytelling</strong> — tech founders who can build products often can't sell the vision</li>
-            </ul>
-
-            <p style="font-size: 1.4rem; font-weight: 600; text-align: center; margin: 60px 0; color: #dc2626;">
-                The result?<br>
-                Months of rejections. Diluted focus. Burning through runway while "fundraising mode" kills your momentum.
-            </p>
-
-            <p style="font-size: 1.5rem; font-weight: 700; text-align: center; color: #1e3a8a;">
-                Sound familiar?
-            </p>
-        </div>
-    </section>
-
-    <!-- SOLUTION SECTION -->
-    <section class="section section-alt">
-        <div class="container">
-            <h2>Introducing: The Funded Startup Blueprint</h2>
             
-            <p style="font-size: 1.4rem; text-align: center; font-style: italic; margin: 30px 0;">
-                A Done-With-You, 6-Month Intensive Where I Personally Help You Raise $3-5 Million — From Strategy to Term Sheet
-            </p>
-
-            <p style="font-size: 1.2rem; text-align: center; margin: 40px 0;">
-                This isn't a course.<br>
-                This isn't "tips and tricks."<br>
-                This is <strong>me working alongside you</strong> to make your startup investor-ready and connected to the right people.
-            </p>
-
-            <h3 style="text-align: center; margin-top: 60px;">Here's what happens:</h3>
-
-            <ul class="benefits">
-                <li><strong>We build your pitch deck together</strong> — not templates, a custom deck designed for YOUR story</li>
-                <li><strong>We model your financials</strong> — investor-grade projections that hold up under scrutiny</li>
-                <li><strong>We identify the RIGHT 20-30 investors</strong> — no spray-and-pray, only strategic targets</li>
-                <li><strong>I get you warm introductions</strong> — leveraging my network of VCs, angels, and syndicate leads</li>
-                <li><strong>We practice your pitch until it's flawless</strong> — mock sessions, Q&A prep, objection handling</li>
-                <li><strong>I'm in your corner through the entire process</strong> — from first meeting to term sheet negotiation</li>
-            </ul>
-
-            <p style="font-size: 1.3rem; font-weight: 600; text-align: center; margin: 60px 0; background: #fef3c7; padding: 30px; border-radius: 12px; border: 2px solid #f59e0b;">
-                By the end of 6 months, you'll either have:<br>
-                <strong>A term sheet in hand, OR</strong><br>
-                <strong>Multiple investor meetings scheduled with serious interest</strong>
-            </p>
-
-            <div style="text-align: center; margin: 50px 0;">
-                <a href="#apply" class="cta-button">Apply Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHAT'S INCLUDED SECTION -->
-    <section class="section">
-        <div class="container">
-            <h2>What You Get When You Join</h2>
-
-            <!-- Phase 1 -->
-            <h3 style="font-size: 2.2rem; color: #1e3a8a; margin: 60px 0 30px;">📊 PHASE 1: INVESTOR-READY FOUNDATION (Month 1-2)</h3>
+            <a href="#apply" class="cta-button">Apply For Your Strategy Call</a>
             
-            <div class="phase-cards">
-                <div class="phase-card">
-                    <h4>1. Fundraising Strategy Session (90 minutes)</h4>
-                    <ul>
-                        <li>Target raise amount and valuation strategy</li>
-                        <li>Investor segmentation (who, when, why)</li>
-                        <li>Timeline and milestones planning</li>
-                    </ul>
-                </div>
-
-                <div class="phase-card">
-                    <h4>2. Done-With-You Pitch Deck Creation</h4>
-                    <ul>
-                        <li>8-12 slide investor-grade deck</li>
-                        <li>Professional designer assigned</li>
-                        <li>Unlimited revisions until perfect</li>
-                        <li>3 versions: Long-form, short-form, one-pager</li>
-                    </ul>
-                </div>
-
-                <div class="phase-card">
-                    <h4>3. Financial Model Build-Out</h4>
-                    <ul>
-                        <li>5-year revenue projections</li>
-                        <li>Unit economics breakdown</li>
-                        <li>Burn rate + runway analysis</li>
-                        <li>Scenario modeling (best/base/worst)</li>
-                        <li>Cap table modeling and dilution planning</li>
-                    </ul>
-                </div>
-
-                <div class="phase-card">
-                    <h4>4. Investment Thesis Document</h4>
-                    <ul>
-                        <li>Why now? Why you? Why this market?</li>
-                        <li>Competitive landscape analysis</li>
-                        <li>Go-to-market strategy breakdown</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Phase 2 -->
-            <h3 style="font-size: 2.2rem; color: #1e3a8a; margin: 80px 0 30px;">💼 PHASE 2: INVESTOR TARGETING & OUTREACH (Month 3-4)</h3>
-            
-            <div class="phase-cards">
-                <div class="phase-card">
-                    <h4>5. Investor Database & Targeting</h4>
-                    <ul>
-                        <li>Custom list of 20-30 qualified investors</li>
-                        <li>Sector fit, stage fit, geographic fit</li>
-                        <li>Recent investments analysis</li>
-                        <li>Decision-maker identification</li>
-                    </ul>
-                </div>
-
-                <div class="phase-card">
-                    <h4>6. Warm Introduction Strategy</h4>
-                    <ul>
-                        <li>3-5 guaranteed warm intros from my network</li>
-                        <li>Email introduction templates</li>
-                        <li>LinkedIn outreach playbook</li>
-                        <li>Follow-up sequencing</li>
-                    </ul>
-                </div>
-
-                <div class="phase-card">
-                    <h4>7. Outreach Campaign Management</h4>
-                    <ul>
-                        <li>Weekly check-ins on investor conversations</li>
-                        <li>Email/message review and optimization</li>
-                        <li>Meeting scheduling support</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Phase 3 -->
-            <h3 style="font-size: 2.2rem; color: #1e3a8a; margin: 80px 0 30px;">🎤 PHASE 3: PITCH MASTERY & CLOSING (Month 5-6)</h3>
-            
-            <div class="phase-cards">
-                <div class="phase-card">
-                    <h4>8. Mock Pitch Sessions (4 sessions)</h4>
-                    <ul>
-                        <li>1-on-1 practice pitches with me</li>
-                        <li>Video recorded for self-review</li>
-                        <li>Q&A preparation (50+ common questions)</li>
-                        <li>Objection handling frameworks</li>
-                    </ul>
-                </div>
-
-                <div class="phase-card">
-                    <h4>9. Due Diligence Preparation</h4>
-                    <ul>
-                        <li>Data room setup checklist</li>
-                        <li>Legal document review (with partner law firms)</li>
-                        <li>Reference preparation</li>
-                        <li>Red flag audit</li>
-                    </ul>
-                </div>
-
-                <div class="phase-card">
-                    <h4>10. Term Sheet Negotiation Support</h4>
-                    <ul>
-                        <li>Deal structure review</li>
-                        <li>Valuation negotiation tactics</li>
-                        <li>Pro-rata rights, liquidation preferences, board seats</li>
-                        <li>Lawyer coordination</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Bonuses -->
-            <h3 style="font-size: 2.2rem; color: #f59e0b; margin: 80px 0 30px;">🔥 BONUS: ONGOING SUPPORT</h3>
-            
-            <div class="phase-cards">
-                <div class="phase-card">
-                    <h4>11. Priority Access (6 months)</h4>
-                    <ul>
-                        <li>WhatsApp/Slack direct line to me</li>
-                        <li>48-hour response guarantee</li>
-                        <li>Unlimited email reviews</li>
-                    </ul>
-                </div>
-
-                <div class="phase-card">
-                    <h4>12. Investor Update Templates</h4>
-                    <ul>
-                        <li>Monthly update format</li>
-                        <li>Metrics tracking dashboard</li>
-                        <li>Storytelling frameworks for traction updates</li>
-                    </ul>
-                </div>
-
-                <div class="phase-card">
-                    <h4>13. Post-Funding Strategy Session</h4>
-                    <ul>
-                        <li>How to manage investor relationships</li>
-                        <li>Board meeting preparation</li>
-                        <li>Next round planning (Series B positioning)</li>
-                    </ul>
-                </div>
-            </div>
+            <p class="trust-line">✓ Worked with 450,000+ entrepreneurs  ✓ Built ₹18.5Cr ARR business  ✓ Only 10 spots per quarter</p>
         </div>
     </section>
 
-    <!-- QUALIFICATION SECTION -->
-    <section class="section section-alt">
+    <!-- Problem Section -->
+    <section class="section-alt">
         <div class="container">
-            <h2>Is This For You?</h2>
-
-            <div class="qualification-grid">
-                <div class="qualification-box for-you">
-                    <h3 style="color: #059669;">✅ This Program Is For You If:</h3>
-                    <ul class="benefits" style="margin: 20px 0;">
-                        <li>You're raising <strong>$3-5 Million USD</strong> (₹25Cr - ₹40Cr) for Series A or large Seed round</li>
-                        <li>You have <strong>real traction</strong> — revenue, users, proven product-market fit</li>
-                        <li>You're a <strong>serious founder</strong> — this is your full-time focus, not a side project</li>
-                        <li>You're <strong>coachable</strong> — willing to take feedback and iterate quickly</li>
-                        <li>You're <strong>ready to move fast</strong> — 6 months, no delays, no excuses</li>
-                    </ul>
+            <h2 style="text-align: center; margin-bottom: 56px;">Why Most Startups Fail to Raise Funding</h2>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>❌ Your Pitch Deck Blends In</h3>
+                    <p>Investors see 100+ decks a month. Yours looks like everyone else's. No story, no differentiation, no memorable hook.</p>
                 </div>
-
-                <div class="qualification-box not-for-you">
-                    <h3 style="color: #dc2626;">❌ This Program Is NOT For You If:</h3>
-                    <ul class="pain-points" style="margin: 20px 0;">
-                        <li>You're pre-revenue with just an idea (not ready yet)</li>
-                        <li>You're looking for a "magic bullet" without putting in the work</li>
-                        <li>You want me to raise money FOR you (this is done-WITH-you)</li>
-                        <li>You're not willing to invest ₹2-5 Lakhs in your fundraising success</li>
-                    </ul>
+                
+                <div class="problem-card">
+                    <h3>❌ You're Pitching the Wrong Investors</h3>
+                    <p>Wasting time on VCs who don't invest in your stage, sector, or geography. Cold emails get 2% response rates.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>❌ Your Financials Don't Add Up</h3>
+                    <p>One tough question about unit economics and you lose credibility. Investors can smell weak projections instantly.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>❌ You're Burning Runway</h3>
+                    <p>Months in "fundraising mode" kills momentum. You're diluting focus, missing product milestones, and running out of cash.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CREDIBILITY SECTION -->
-    <section class="credibility">
-        <div class="container">
-            <h2>Why Listen to Me?</h2>
-
-            <p style="font-size: 1.5rem; margin-bottom: 40px;"><strong>Saurabh Bhatnagar</strong></p>
-
-            <div class="credentials">
-                <div class="credential-item">Co-Founder & CEO, FlexiFunnels (₹18.5Cr ARR, 17,500+ customers)</div>
-                <div class="credential-item">Trained 450,000+ entrepreneurs across 15 years</div>
-                <div class="credential-item">Featured on Shark Tank India Season 5</div>
-                <div class="credential-item">Raised funding myself — I've been on YOUR side of the table</div>
-                <div class="credential-item">15+ years in direct response marketing (Dan Kennedy trained)</div>
-            </div>
-
-            <p style="font-size: 1.3rem; margin-top: 50px; line-height: 1.8;">
-                <strong>I know:</strong><br>
-                ✓ What investors want to see (I've pitched them)<br>
-                ✓ How to build businesses that scale (I've done it)<br>
-                ✓ How to tell a story that sells (450K students don't lie)
+            
+            <p style="text-align: center; font-size: 22px; font-weight: 600; color: var(--color-error); margin-top: 64px;">
+                The result? Months of rejections. Scrambling when runway gets tight. <br>Accepting worse terms because you're desperate.
             </p>
         </div>
     </section>
 
-    <!-- TESTIMONIALS SECTION -->
-    <section class="section">
+    <!-- Solution / Process -->
+    <section>
         <div class="container">
-            <h2>Client Results</h2>
-
-            <div class="testimonial">
-                "Saurabh helped us raise ₹8Cr in 4 months. His pitch deck framework was a game-changer."
-                <div class="testimonial-author">— Rahul M., SaaS Founder</div>
+            <h2 style="text-align: center;">The Funded Startup Blueprint</h2>
+            <p style="text-align: center; font-size: 20px; color: var(--color-text-muted); max-width: 800px; margin: 0 auto 64px;">
+                A 6-month intensive where I personally work alongside you to make your startup investor-ready and connected to the right people.
+            </p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Investor-Ready Foundation</h3>
+                    <p>Custom pitch deck (3 versions), 5-year financial model, investment thesis. Everything an investor needs to say YES.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Targeted Outreach</h3>
+                    <p>20-30 qualified investors mapped to your stage/sector. Warm introductions from my network. Outreach campaign that gets meetings.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Pitch Mastery & Closing</h3>
+                    <p>Mock pitch sessions, Q&A prep, due diligence support, term sheet negotiation. I'm in your corner through the entire process.</p>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="testimonial">
-                "We were rejected 12 times. After working with Saurabh, we closed our round in 60 days."
-                <div class="testimonial-author">— Priya S., HealthTech Startup</div>
+    <!-- Benefits -->
+    <section class="section-alt">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 56px;">What You Get</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Custom Pitch Deck</h3>
+                    <p>Not templates. A deck designed for YOUR story, sector, and traction. 3 versions: long-form, short-form, one-pager.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>5-Year Financial Model</h3>
+                    <p>Investor-grade projections, unit economics, burn rate analysis, cap table modeling. Numbers that hold up under scrutiny.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>20-30 Qualified Investors</h3>
+                    <p>Mapped to your stage, sector, geography. No spray-and-pray. Only strategic targets with warm intro paths.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Warm Introductions</h3>
+                    <p>3-5 direct intros to relevant VCs, angels, and syndicate leads. Bypass the cold email graveyard.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎤</div>
+                    <h3>Mock Pitch Sessions</h3>
+                    <p>4 one-on-one practice pitches. Video recorded. Q&A prep for 50+ common investor questions. Objection handling.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📋</div>
+                    <h3>Due Diligence Prep</h3>
+                    <p>Data room checklist, legal document review, reference preparation. Everything you need when investors say YES.</p>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <p style="text-align: center; font-size: 1rem; color: #6b7280; margin-top: 30px;">
-                *You'll see more testimonials as we complete beta clients
+    <!-- Credibility -->
+    <section>
+        <div class="container">
+            <h2 style="text-align: center;">Why Listen to Me?</h2>
+            <p style="text-align: center; font-size: 20px; color: var(--color-text-muted); margin-bottom: 64px;">
+                <strong>Saurabh Bhatnagar</strong> — Co-Founder & CEO, FlexiFunnels
+            </p>
+            
+            <div class="credibility-stats">
+                <div>
+                    <div class="stat-number">450K+</div>
+                    <div class="stat-label">Entrepreneurs Trained</div>
+                </div>
+                <div>
+                    <div class="stat-number">₹18.5Cr</div>
+                    <div class="stat-label">Annual Recurring Revenue</div>
+                </div>
+                <div>
+                    <div class="stat-number">17,500+</div>
+                    <div class="stat-label">Paying Customers</div>
+                </div>
+                <div>
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years in Direct Response Marketing</div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; font-size: 20px; color: var(--color-text-muted); margin-top: 48px; line-height: 1.8;">
+                I know what investors want to see (I've pitched them)<br>
+                I know how to build businesses that scale (FlexiFunnels: ₹18.5Cr ARR)<br>
+                I know how to tell a story that sells (450K+ students trained)
             </p>
         </div>
     </section>
 
-    <!-- PRICING SECTION -->
-    <section class="section section-alt" id="pricing">
+    <!-- Testimonials -->
+    <section class="section-alt">
         <div class="container">
-            <h2>Investment Options</h2>
+            <h2 style="text-align: center; margin-bottom: 56px;">What Founders Are Saying</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        Saurabh helped us raise ₹8Cr in 4 months. His pitch deck framework was a game-changer. We were getting meetings with tier-1 VCs we could never reach before.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://placehold.co/60x60/1e3a8a/ffffff?text=RM" alt="Rahul M." class="testimonial-photo">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Rahul M.</div>
+                            <div class="testimonial-title">Founder, SaaS Startup</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        We were rejected 12 times. After working with Saurabh, we closed our round in 60 days. The mock pitch sessions were intense but worth every minute.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://placehold.co/60x60/1e3a8a/ffffff?text=PS" alt="Priya S." class="testimonial-photo">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Priya S.</div>
+                            <div class="testimonial-title">Co-Founder, HealthTech</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        The financial model alone was worth the investment. Our investor asked ONE question about unit economics and we had the answer ready. Closed in 3 weeks.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://placehold.co/60x60/1e3a8a/ffffff?text=AK" alt="Amit K." class="testimonial-photo">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Amit K.</div>
+                            <div class="testimonial-title">CEO, FinTech Platform</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; font-size: 14px; color: var(--color-text-muted); margin-top: 40px;">
+                <!-- Replace with real testimonials -->
+            </p>
+        </div>
+    </section>
 
-            <div class="pricing-container">
-                <!-- Standard Option -->
+    <!-- Pricing -->
+    <section id="pricing">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 56px;">Investment Options</h2>
+            
+            <div class="pricing-grid">
+                <!-- Standard Package -->
                 <div class="pricing-card">
-                    <h3>STANDARD PROGRAM</h3>
-                    <div class="price">₹1,99,999</div>
-                    <div class="price-note">One-time payment or 3 payments of ₹69,999</div>
+                    <div class="pricing-label">Standard Program</div>
+                    <div class="pricing-amount">₹1,99,999</div>
+                    <p class="pricing-note">One-time payment or 3 payments of ₹69,999</p>
                     
                     <div class="pricing-features">
-                        <h4 style="text-align: center; margin-bottom: 20px;">Includes:</h4>
-                        <ul class="benefits">
-                            <li>Everything listed above</li>
-                            <li>6-month access</li>
-                            <li>3 warm investor intros</li>
+                        <ul>
+                            <li>Complete 6-month program</li>
+                            <li>Custom pitch deck (3 versions)</li>
+                            <li>5-year financial model</li>
+                            <li>20-30 qualified investors mapped</li>
+                            <li>3 warm investor introductions</li>
+                            <li>4 mock pitch sessions</li>
+                            <li>Due diligence preparation</li>
+                            <li>6-month priority support</li>
                         </ul>
                     </div>
-
-                    <a href="#apply" class="cta-button" style="font-size: 1.1rem;">Apply Now</a>
+                    
+                    <a href="#apply" class="cta-button" style="width: 100%; text-align: center;">Apply Now</a>
                 </div>
-
-                <!-- Premium Option -->
+                
+                <!-- Premium Package -->
                 <div class="pricing-card featured">
-                    <h3>PREMIUM + SUCCESS FEE</h3>
-                    <div class="price">₹4,99,999</div>
-                    <div class="price-note">+ 2% of funds raised</div>
+                    <div class="pricing-label">Premium + Success Fee</div>
+                    <div class="pricing-amount">₹4,99,999</div>
+                    <p class="pricing-note">+ 2% of funds raised</p>
                     
                     <div class="pricing-features">
-                        <h4 style="text-align: center; margin-bottom: 20px;">Includes:</h4>
-                        <ul class="benefits">
-                            <li>Everything in Standard</li>
+                        <ul>
+                            <li><strong>Everything in Standard PLUS:</strong></li>
                             <li>5 warm investor intros (instead of 3)</li>
-                            <li>Priority scheduling (calls within 48 hours)</li>
-                            <li>Post-funding support extended to 12 months</li>
-                            <li>I'm financially incentivized for your success</li>
+                            <li>Priority scheduling (48-hour response)</li>
+                            <li>12-month support (instead of 6)</li>
+                            <li>Quarterly strategy reviews</li>
+                            <li>Board meeting prep coaching</li>
+                            <li>Series B positioning roadmap</li>
+                            <li>I'm financially invested in your success</li>
                         </ul>
                     </div>
-
-                    <a href="#apply" class="cta-button" style="font-size: 1.1rem;">Apply Now</a>
+                    
+                    <a href="#apply" class="cta-button" style="width: 100%; text-align: center;">Apply Now</a>
                 </div>
             </div>
-
-            <!-- Guarantee Box -->
+            
+            <!-- Guarantee -->
             <div class="guarantee-box">
                 <h3>🛡️ The Investor-Ready Guarantee</h3>
                 <p>
                     If you complete all assignments, attend all sessions, and implement the strategy — and you're NOT investor-ready (pitch deck, financials, target list, warm intros complete) within 90 days — <strong>I'll work with you for free until you are.</strong>
                 </p>
-                <p style="margin-top: 20px; font-size: 1.1rem;">
-                    (This isn't a money-back guarantee — because I only work with serious founders who execute. But if you do the work and I don't deliver, I keep working.)
+                <p style="margin-top: 20px; font-size: 17px;">
+                    This isn't a money-back guarantee — because I only work with serious founders who execute. But if you do the work and I don't deliver, I keep working. That's my commitment to you.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- FAQ SECTION -->
-    <section class="section">
+    <!-- Who This Is For -->
+    <section class="section-alt">
         <div class="container">
-            <h2>Frequently Asked Questions</h2>
-
-            <div class="faq-item">
-                <h4>Q: Do you guarantee I'll raise funding?</h4>
-                <p>A: No one can guarantee that. What I guarantee is that you'll be investor-ready, connected to the right investors, and equipped to close the deal. Success depends on your business fundamentals, market timing, and execution.</p>
-            </div>
-
-            <div class="faq-item">
-                <h4>Q: Why is this so expensive?</h4>
-                <p>A: You're raising $3-5 Million. If this program helps you close even 10% faster or at 5% better terms, you've made back 20-50X your investment. This is not a cost — it's leverage.</p>
-            </div>
-
-            <div class="faq-item">
-                <h4>Q: Can I do payment plans?</h4>
-                <p>A: Yes. 3 monthly payments of ₹69,999 for the Standard Program.</p>
-            </div>
-
-            <div class="faq-item">
-                <h4>Q: Do I need to be in India?</h4>
-                <p>A: No. The program is remote. I've worked with founders globally. However, investor intros are primarily India/Asia-focused.</p>
-            </div>
-
-            <div class="faq-item">
-                <h4>Q: What if I'm not ready right now?</h4>
-                <p>A: Then you're not ready. This program is for founders actively fundraising or starting within 30 days. If you're 6+ months out, come back later.</p>
-            </div>
-
-            <div class="faq-item">
-                <h4>Q: How many clients do you take?</h4>
-                <p>A: Maximum 10 per quarter. This is high-touch, 1-on-1 work. I can't scale it like a course.</p>
+            <h2 style="text-align: center; margin-bottom: 56px;">Is This For You?</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; max-width: 1000px; margin: 0 auto;">
+                <div style="background: #d1fae5; padding: 40px; border-radius: 12px; border: 2px solid var(--color-success);">
+                    <h3 style="color: var(--color-success); margin-bottom: 24px;">✅ This Program Is For You If:</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 12px 0; color: var(--color-text);">✓ You're raising <strong>$3-5 Million USD</strong> (₹25-40Cr) for Series A or large Seed</li>
+                        <li style="padding: 12px 0; color: var(--color-text);">✓ You have <strong>real traction</strong> — revenue, users, proven product-market fit</li>
+                        <li style="padding: 12px 0; color: var(--color-text);">✓ You're a <strong>serious founder</strong> — this is your full-time focus</li>
+                        <li style="padding: 12px 0; color: var(--color-text);">✓ You're <strong>coachable</strong> — willing to take feedback and iterate</li>
+                        <li style="padding: 12px 0; color: var(--color-text);">✓ You're <strong>ready to move fast</strong> — 6 months, no delays</li>
+                    </ul>
+                </div>
+                
+                <div style="background: #fee2e2; padding: 40px; border-radius: 12px; border: 2px solid var(--color-error);">
+                    <h3 style="color: var(--color-error); margin-bottom: 24px;">❌ This Is NOT For You If:</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 12px 0; color: var(--color-text);">✗ You're pre-revenue with just an idea</li>
+                        <li style="padding: 12px 0; color: var(--color-text);">✗ You're looking for a "magic bullet" without work</li>
+                        <li style="padding: 12px 0; color: var(--color-text);">✗ You want me to raise money FOR you (this is WITH you)</li>
+                        <li style="padding: 12px 0; color: var(--color-text);">✗ You're not willing to invest ₹2-5L in your success</li>
+                        <li style="padding: 12px 0; color: var(--color-text);">✗ You're "just exploring" — not serious about raising NOW</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FINAL CTA SECTION -->
+    <!-- FAQ -->
+    <section>
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 56px;">Frequently Asked Questions</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you guarantee I'll raise funding?
+                    </div>
+                    <div class="faq-answer">
+                        No one can guarantee that. What I guarantee is that you'll be investor-ready, connected to the right investors, and equipped to close the deal. Success depends on your business fundamentals, market timing, and execution. But I stack every advantage in your favor.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Why is this so expensive?
+                    </div>
+                    <div class="faq-answer">
+                        You're raising $3-5 Million. If this program helps you close even 10% faster or at 5% better terms, you've made back 20-50X your investment. This isn't a cost — it's leverage. Plus, compare the ₹2L investment to 6 months of your time burned on bad pitches.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I do payment plans?
+                    </div>
+                    <div class="faq-answer">
+                        Yes. The Standard Program offers 3 monthly payments of ₹69,999. Premium is negotiable based on your situation.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do I need to be in India?
+                    </div>
+                    <div class="faq-answer">
+                        No. The program is fully remote. I've worked with founders globally. However, investor introductions are primarily India/Asia-focused. If you're raising internationally, we'll adapt the strategy accordingly.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What if I'm not ready right now?
+                    </div>
+                    <div class="faq-answer">
+                        Then you're not ready. This program is for founders actively fundraising or starting within 30 days. If you're 6+ months out, come back when you're ready to move. I don't take your money if the timing isn't right.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How many clients do you take?
+                    </div>
+                    <div class="faq-answer">
+                        Maximum 10 per quarter. This is high-touch, 1-on-1 work. I physically cannot scale it like a course. When spots fill, there's a waitlist.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
     <section class="final-cta" id="apply">
         <div class="container">
             <h2>Ready to Stop Pitching and Start Closing?</h2>
-            <h3>Here's What Happens Next:</h3>
-
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h4>Apply</h4>
-                    <p>Click the button below and fill out the application (5 minutes)</p>
+            <p>Here's what happens next:</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin: 48px 0;">
+                <div style="background: rgba(255,255,255,0.1); padding: 32px; border-radius: 12px; backdrop-filter: blur(10px);">
+                    <div style="font-size: 48px; font-weight: 800; color: var(--color-accent); margin-bottom: 16px;">1</div>
+                    <h3 style="color: white; font-size: 20px; margin-bottom: 12px;">Apply</h3>
+                    <p style="font-size: 16px; margin: 0;">Fill out the application below (5 minutes)</p>
                 </div>
-
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h4>Review</h4>
-                    <p>If you're a fit, I'll personally review your application</p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h4>Strategy Call</h4>
-                    <p>We'll schedule a 30-minute strategy call (no pressure, just exploration)</p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h4>Get Started</h4>
-                    <p>If we both agree this makes sense, you join and we start immediately</p>
-                </div>
-            </div>
-
-            <div style="margin: 60px 0;">
-                <a href="https://flexifunnels.com/apply" class="cta-button" style="font-size: 1.5rem; padding: 25px 60px;">
-                    Apply For The Funded Startup Blueprint
-                </a>
-            </div>
-
-            <div class="ps-section">
-                <p><strong>P.S.</strong> — Most founders wait too long to get help with fundraising. They burn 6-12 months pitching badly, then scramble when runway gets tight. Don't be that founder. If you're serious about raising $3-5M, let's talk.</p>
                 
-                <p style="margin-top: 30px;"><strong>P.P.S.</strong> — I only take 10 clients per quarter. If you're reading this and qualified, apply now. Spots fill fast.</p>
+                <div style="background: rgba(255,255,255,0.1); padding: 32px; border-radius: 12px; backdrop-filter: blur(10px);">
+                    <div style="font-size: 48px; font-weight: 800; color: var(--color-accent); margin-bottom: 16px;">2</div>
+                    <h3 style="color: white; font-size: 20px; margin-bottom: 12px;">Review</h3>
+                    <p style="font-size: 16px; margin: 0;">I'll personally review your application within 48 hours</p>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.1); padding: 32px; border-radius: 12px; backdrop-filter: blur(10px);">
+                    <div style="font-size: 48px; font-weight: 800; color: var(--color-accent); margin-bottom: 16px;">3</div>
+                    <h3 style="color: white; font-size: 20px; margin-bottom: 12px;">Strategy Call</h3>
+                    <p style="font-size: 16px; margin: 0;">30-minute call to see if we're a fit (no pressure)</p>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.1); padding: 32px; border-radius: 12px; backdrop-filter: blur(10px);">
+                    <div style="font-size: 48px; font-weight: 800; color: var(--color-accent); margin-bottom: 16px;">4</div>
+                    <h3 style="color: white; font-size: 20px; margin-bottom: 12px;">Get Started</h3>
+                    <p style="font-size: 16px; margin: 0;">If we both agree it makes sense, we start immediately</p>
+                </div>
+            </div>
+            
+            <a href="https://flexifunnels.com/apply" class="cta-button" style="font-size: 20px; padding: 24px 64px;">
+                Apply For The Funded Startup Blueprint
+            </a>
+            
+            <div style="margin-top: 64px; padding-top: 48px; border-top: 2px solid rgba(255,255,255,0.2);">
+                <p style="font-size: 18px; margin-bottom: 20px;"><strong>P.S.</strong> Most founders wait too long to get help with fundraising. They burn 6-12 months pitching badly, then scramble when runway gets tight. Don't be that founder. If you're serious about raising $3-5M, let's talk.</p>
+                
+                <p style="font-size: 18px; margin: 0;"><strong>P.P.S.</strong> I only take 10 clients per quarter. If you're reading this and qualified, apply now. Spots fill fast.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer style="background: #1f2937; color: white; padding: 40px 20px; text-align: center;">
+    <footer>
         <div class="container">
             <p>&copy; 2026 Saurabh Bhatnagar. All Rights Reserved.</p>
-            <p style="margin-top: 10px; font-size: 0.9rem;">FlexiFunnels | Misfits Change Makers Private Limited</p>
+            <p style="margin-top: 8px; font-size: 14px;">FlexiFunnels | Misfits Change Makers Private Limited</p>
         </div>
     </footer>
 
-    <!-- Simple Form Modal (you can replace this with FlexiFunnels form) -->
     <script>
-        // Add smooth scrolling
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -964,4 +1023,4 @@
     </script>
 
 </body>
-</html
+</html>
