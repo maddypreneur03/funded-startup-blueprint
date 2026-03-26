@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply - Funded Startup Blueprint | Saurabh Bhatnagar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .intro {
+            font-size: 1.2rem;
+            color: #4b5563;
+            text-align: center;
+            margin-bottom: 50px;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        .required {
+            color: #dc2626;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .radio-option,
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .radio-option:hover,
+        .checkbox-option:hover {
+            border-color: #3b82f6;
+            background: #eff6ff;
+        }
+
+        .radio-option input,
+        .checkbox-option input {
+            width: auto;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .help-text {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-top: 5px;
+        }
+
+        .submit-button {
+            width: 100%;
+            background: #f59e0b;
+            color: white;
+            padding: 20px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-button:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+        }
+
+        .privacy-note {
+            font-size: 0.9rem;
+            color: #6b7280;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Application Form</h1>
+        <div class="intro">
+            <p>This application helps us understand if we're a good fit for each other.</p>
+            <p><strong>Be honest and detailed</strong> — there are no wrong answers, just answers that help us both make the right decision.</p>
+        </div>
+
+        <form id="applicationForm" action="https://flexifunnels.com/submit-application" method="POST">
+            
+            <!-- Basic Information -->
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number (WhatsApp) <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required>
+                <div class="help-text">Include country code (e.g., +91 98765 43210)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="linkedin">LinkedIn Profile URL</label>
+                <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+            </div>
+
+            <!-- Company Information -->
+            <div class="form-group">
+                <label for="company">Company Name <span class="required">*</span></label>
+                <input type="text" id="company" name="company" required>
+            </div>
+
+            <div class="form-group">
+                <label for="website">Company Website</label>
+                <input type="url" id="website" name="website" placeholder="https://yourcompany.com">
+            </div>
+
+            <div class="form-group">
+                <label for="industry">Industry / Sector <span class="required">*</span></label>
+                <select id="industry" name="industry" required>
+                    <option value="">Select one...</option>
+                    <option value="saas">SaaS / Software</option>
+                    <option value="fintech">FinTech</option>
+                    <option value="ecommerce">E-commerce / D2C</option>
+                    <option value="edtech">EdTech</option>
+                    <option value="healthtech">HealthTech</option>
+                    <option value="deeptech">DeepTech / AI</option>
+                    <option value="marketplace">Marketplace</option>
+                    <option value="b2b">B2B Services</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">What does your company do? (2-3 sentences) <span class="required">*</span></label>
+                <textarea id="description" name="description" required placeholder="Explain your product/service, who it's for, and the problem you solve..."></textarea>
+            </div>
+
+            <!-- Traction -->
+            <div class="form-group">
+                <label for="stage">Current Stage <span class="required">*</span></label>
+                <select id="stage" name="stage" required>
+                    <option value="">Select one...</option>
+                    <option value="idea">Idea stage (no product yet)</option>
+                    <option value="mvp">MVP / Prototype built</option>
+                    <option value="early-revenue">Early revenue (&lt;₹10L ARR)</option>
+                    <option value="growth">Growth stage (₹10L - ₹1Cr ARR)</option>
+                    <option value="scale">Scaling (₹1Cr+ ARR)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="revenue">Current Monthly Revenue (approximate)</label>
+                <select id="revenue" name="revenue">
+                    <option value="">Select range...</option>
+                    <option value="0">₹0 (Pre-revenue)</option>
+                    <option value="1-5">₹1L - ₹5L</option>
+                    <option value="5-10">₹5L - ₹10L</option>
+                    <option value="10-25">₹10L - ₹25L</option>
+                    <option value="25-50">₹25L - ₹50L</option>
+                    <option value="50+">₹50L+</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="customers">Number of Customers / Users <span class="required">*</span></label>
+                <input type="text" id="customers" name="customers" required placeholder="e.g., 500 paying customers, 10,000 users">
+            </div>
+
+            <div class="form-group">
+                <label for="team-size">Team Size <span class="required">*</span></label>
+                <select id="team-size" name="team_size" required>
+                    <option value="">Select range...</option>
+                    <option value="1-2">1-2 (solo or co-founder)</option>
+                    <option value="3-5">3-5</option>
+                    <option value="6-10">6-10</option>
+                    <option value="11-25">11-25</option>
+                    <option value="25+">25+</option>
+                </select>
+            </div>
+
+            <!-- Fundraising Goals -->
+            <div class="form-group">
+                <label for="raise-amount">How much are you looking to raise? <span class="required">*</span></label>
+                <select id="raise-amount" name="raise_amount" required>
+                    <option value="">Select amount...</option>
+                    <option value="1-2m">$1-2 Million</option>
+                    <option value="2-3m">$2-3 Million</option>
+                    <option value="3-5m">$3-5 Million</option>
+                    <option value="5m+">$5 Million+</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="timeline">When do you need the funding by? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="timeline" value="immediate" required>
+                        <span>ASAP / Within 3 months</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="timeline" value="3-6m">
+                        <span>3-6 months</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="timeline" value="6-12m">
+                        <span>6-12 months</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="timeline" value="exploring">
+                        <span>Just exploring options</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="use-of-funds">What will you use the funds for? <span class="required">*</span></label>
+                <textarea id="use-of-funds" name="use_of_funds" required placeholder="e.g., Product development, hiring, marketing, international expansion..."></textarea>
+            </div>
+
+            <!-- Previous Fundraising -->
+            <div class="form-group">
+                <label for="prev-funding">Have you raised funding before? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="prev_funding" value="yes" required>
+                        <span>Yes (specify amount and investors below)</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="prev_funding" value="no">
+                        <span>No, this is my first round</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="prev-details">If yes, how much and from whom?</label>
+                <textarea id="prev-details" name="prev_details" placeholder="e.g., Raised ₹50L from angel investors in 2024"></textarea>
+            </div>
+
+            <!-- Current Challenges -->
+            <div class="form-group">
+                <label for="challenges">What's your biggest challenge with fundraising right now? <span class="required">*</span></label>
+                <textarea id="challenges" name="challenges" required placeholder="Be specific — this helps us understand if we can help..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="tried">What have you already tried? <span class="required">*</span></label>
+                <textarea id="tried" name="tried" required placeholder="e.g., Sent cold emails to 50 VCs, created a pitch deck on Canva, attended startup events..."></textarea>
+            </div>
+
+            <!-- Commitment & Investment -->
+            <div class="form-group">
+                <label>Are you ready to invest ₹2-5 Lakhs in professional fundraising support? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="budget" value="yes-now" required>
+                        <span>Yes, I can start immediately</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="budget" value="yes-payment-plan">
+                        <span>Yes, but I'd need a payment plan</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="budget" value="maybe">
+                        <span>Maybe, I need to understand the ROI first</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="budget" value="no">
+                        <span>No, I was hoping this would be cheaper</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>How committed are you to raising funding in the next 6 months? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="commitment" value="10" required>
+                        <span>🔥 10/10 — This is my #1 priority</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="commitment" value="7-9">
+                        <span>7-9/10 — Very important, but other things compete for my time</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="commitment" value="below-7">
+                        <span>&lt;7/10 — It's on my radar, but not urgent</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Why Us -->
+            <div class="form-group">
+                <label for="why-us">Why are you applying to work with Saurabh specifically? <span class="required">*</span></label>
+                <textarea id="why-us" name="why_us" required placeholder="What attracted you to this program?"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="questions">Any questions for us before we speak?</label>
+                <textarea id="questions" name="questions" placeholder="Optional — anything you want to clarify upfront?"></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="submit-button">Submit Application</button>
+
+            <div class="privacy-note">
+                By submitting this form, you agree to receive emails and calls from Saurabh Bhatnagar / FlexiFunnels regarding your application. We respect your privacy and won't spam you.
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+            
+            // You can integrate this with FlexiFunnels, ActiveCampaign, or any CRM
+            // For now, showing a success message
+            
+            alert('Application submitted successfully! We\'ll review your application and get back to you within 48 hours.');
+            
+            // Optionally redirect
+            // window.location.href = '/thank-you';
+        });
+    </script>
+
+</body>
+</html>
